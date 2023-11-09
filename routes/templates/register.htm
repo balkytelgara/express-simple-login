@@ -1,0 +1,40 @@
+<style>
+	body {
+		font-family: Helvetica;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	input, button {
+		outline: none;
+		font: 17px Helvetica;
+		padding: 0.7em 1.2em;
+		border: 1.5px solid black;
+		border-radius: 50px;
+		background: none;
+	}
+	input:focus, button:hover {
+		background: black;
+		color: white;
+	}
+	button:hover {
+		cursor: pointer;
+	}
+	button:active {
+		box-shadow: 0 0 10px black;
+	}
+</style>
+<body>
+	<h2>Registration</h2>
+	<form action="/register" method="POST">
+		<input type="text" name="username" placeholder="Username" maxlength="20">
+		<input type="password" name="password" placeholder="Password">
+		<button type="submit">Submit</button>
+	</form>
+</body>
